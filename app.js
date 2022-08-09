@@ -1,14 +1,9 @@
 let itemsArray = localStorage.getItem('items')
   ? JSON.parse(localStorage.getItem('items'))
-  : [];
+  : []
 
-localStorage.setItem('items', JSON.stringify(itemsArray));
+localStorage.setItem('items', JSON.stringify(itemsArray))
 const data = JSON.parse(localStorage.getItem('items'))
-
-data.forEach((item) => {
-  addTodo(item)
-})
-
 
 handleLogoClick = () => {
   const url = "https://animechan.vercel.app/api/random";
@@ -28,15 +23,19 @@ function handleSubmitForm(e) {
   e.preventDefault();
   let input = document.querySelector('input');
   if (input.value != '') {
-    addTodo(input.value);
     itemsArray.push(input.value);
     localStorage.setItem('items', JSON.stringify(itemsArray));
+    addTodo(input.value);
   } else {
     alert("Please write a task first!");
   }
 
   input.value = '';
 }
+
+data.forEach((item) => {
+  addTodo(item)
+})
 
 function addTodo(todo) {
   let ul = document.querySelector('ul');
@@ -71,9 +70,7 @@ function checkTodo(e) {
 
 function deleteTodo(e) {
   let item = e.target.parentNode;
-
   item.remove();
-  localStorage.removeItem(item.key)
 }
 
 document.getElementById('clearAll').addEventListener('click', handleClearAll);
