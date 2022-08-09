@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will's space</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Uchen&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+<body class="container">
+
+    <div class="clear"></div>
+
+    <header class="logo">
+      <a href="#" onclick="handleLogoClick(event)">
+        <img src="images/snufkin.png" alt="Snufkin PFP">
+      </a>
+      <p>click me for a quote!</p>
+    </header>
+
+    <div class="main">
+      <div class="title">
+        <h1>Here's a little to-do list I made</h1>
+      </div>
+
+      <div class="form">
+        <h2>Type something here</h2>
+        <form>
+          <input type="text" placeholder="New Task ...">
+          <button type="submit">Add Task</button>
+        </form>
+      </div>
+
+      <div class="todoList">
+        <ul>
+
+        </ul>
+        <a class="clearAll" id="clearAll">Clear All</a>
+      </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
