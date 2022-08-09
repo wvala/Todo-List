@@ -110,3 +110,12 @@ i {
 .clearAll:hover {
   color: #BA7C7C;
 }
+
+.todo-list-item {
+  transition: all 0.3s ease-out;
+}
+
+.todo-list-item-fall {
+  transform: translateY(12rem) rotateZ(10deg);
+  opacity: 0;
+}
